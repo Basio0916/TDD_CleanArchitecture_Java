@@ -11,4 +11,10 @@ public class UserRepository implements IUserRepository {
 		return null;
 	}
 
+	@Override
+	public void login(String id) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
 }
