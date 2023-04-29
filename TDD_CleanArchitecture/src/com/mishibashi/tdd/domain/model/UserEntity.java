@@ -6,6 +6,6 @@ public class UserEntity extends Entity<User> {
 	}
 
 	public String getUpperName() {
-		return "";
+		return getEntity().getName().toUpperCase();
 	}
 }
