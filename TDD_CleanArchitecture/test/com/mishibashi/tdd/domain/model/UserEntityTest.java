@@ -11,7 +11,8 @@ class UserEntityTest {
 		User user = new User("0001", "Makoto Ishibashi");
 		String expectedString = "MAKOTO ISHIBASHI";
 		
-		UserEntity userEntity = new UserEntity(user);
+		UserEntity userEntity = new UserEntity();
+		userEntity.setData(user);
 		
 		assertEquals(expectedString, userEntity.getUpperName());
 	}

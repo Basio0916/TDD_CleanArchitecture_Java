@@ -6,13 +6,11 @@ import java.util.List;
 
 public abstract class Aggregate <T extends Entity<U>, U extends Data>{
 	private final List<T> _entityList;
-	private final Class<T> _type; 
 	
 	public Aggregate(Class<T> type ,U data[]) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		if(type == null) {
 			throw new NullPointerException();
 		}
-		_type = type;
 		_entityList = new ArrayList<T>();
 		
 		if(data == null) {
