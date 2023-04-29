@@ -4,6 +4,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mishibashi.tdd.exception.NotFoundException;
+
 public abstract class Aggregate <T extends Entity<U>, U extends Data>{
 	private final List<T> _entityList;
 	
@@ -22,6 +24,13 @@ public abstract class Aggregate <T extends Entity<U>, U extends Data>{
 			entity.setData(d);
 			_entityList.add(entity);
 		}
+	}
+	
+	public T getFirstEntity() throws NotFoundException {
+		if(!isExist()) {
+			throw new NotFoundException();
+		}
+		return _entityList.get(0);
 	}
 	
 	public List<T> getEntityList() {

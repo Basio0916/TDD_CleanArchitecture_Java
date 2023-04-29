@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="lib/mockito-core-5.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/byte-buddy-1.14.4.jar"/>
 	<classpathentry kind="lib" path="lib/byte-buddy-agent-1.14.4.jar"/>
+	<classpathentry kind="lib" path="lib/checker-qual-3.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/dbunit-2.7.3.jar"/>
+	<classpathentry kind="lib" path="lib/mockito-core-5.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/mockito-subclass-5.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/objenesis-3.3.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc8-19.3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/ons-19.3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/oraclepki-19.3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/osdt_cert-19.3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/osdt_core-19.3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-42.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/simplefan-19.3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.41.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/ucp-19.3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.25.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

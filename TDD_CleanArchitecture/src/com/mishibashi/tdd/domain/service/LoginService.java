@@ -1,5 +1,8 @@
 package com.mishibashi.tdd.domain.service;
 
+import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
+
 import com.mishibashi.tdd.domain.model.UserAggregate;
 import com.mishibashi.tdd.domain.repository.IUserRepository;
 import com.mishibashi.tdd.exception.NotFoundException;
@@ -11,12 +14,12 @@ public class LoginService {
 		_repository = repository;
 	}
 	
-	public boolean isExist(String id) {
+	public boolean isExist(String id) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, SQLException {
 		UserAggregate users = _repository.findById(id);
 		return users.isExist();
 	}
 	
-	public String getName(String id) throws NotFoundException {
+	public String getName(String id) throws NotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, SQLException {
 		UserAggregate users = _repository.findById(id);
 		if(!users.isExist()) {
 			throw new NotFoundException();
@@ -25,12 +28,12 @@ public class LoginService {
 		return users.getEntityList().get(0).getData().getName();
 	}
 	
-	public void login(String id) throws NotFoundException {
+	public void login(String id, String terminalNo) throws NotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, SQLException {
 		UserAggregate users = _repository.findById(id);
 		if(!users.isExist()) {
 			throw new NotFoundException();
 		}
 		
-		_repository.login(id);
+		_repository.login(id, terminalNo);
 	}
 }
