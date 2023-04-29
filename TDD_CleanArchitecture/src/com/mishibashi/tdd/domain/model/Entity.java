@@ -1,16 +1,20 @@
 package com.mishibashi.tdd.domain.model;
 
 public abstract class Entity <T extends Data>{
-	private final T _entity;
+	private T _data;
 	
-	public Entity(T entity) {
-		if(entity == null) {
-			throw new NullPointerException();
-		}
-		_entity = entity;
+	public Entity(T data) {
+		setData(data);
 	}
 	
-	public T getEntity() {
-		return _entity;
+	public T getData() {
+		return _data;
+	}
+	
+	public void setData(T data) {
+		if(data == null) {
+			throw new NullPointerException();
+		}
+		_data = data;
 	}
 }
