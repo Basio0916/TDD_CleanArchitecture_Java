@@ -1,6 +1,6 @@
 package com.mishibashi.tdd.domain.model;
 
-public abstract class Entity <T>{
+public abstract class Entity <T extends Data>{
 	private final T _entity;
 	
 	public Entity(T entity) {
