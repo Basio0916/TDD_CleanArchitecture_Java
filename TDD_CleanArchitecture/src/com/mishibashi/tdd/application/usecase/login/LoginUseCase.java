@@ -4,19 +4,18 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import com.mishibashi.tdd.domain.repository.IUserRepository;
 import com.mishibashi.tdd.domain.service.LoginService;
 import com.mishibashi.tdd.exception.NotFoundException;
-import com.mishibashi.tdd.infrastructure.UserRepository;
 
 public class LoginUseCase {
+	private final Connection connection;
 	private final LoginService loginService;
 	private final ILoginUseCaseOutputPort outputPort;
 	
-	public LoginUseCase(Connection connection, ILoginUseCaseOutputPort outputPort) {
+	public LoginUseCase(Connection connection, ILoginUseCaseOutputPort outputPort, LoginService loginService) {
+		this.connection = connection;
 		this.outputPort = outputPort;
-		IUserRepository userRepository = new UserRepository(connection);
-		loginService = new LoginService(userRepository);
+		this.loginService = loginService;
 	}
 	
 	public void getUserName(String id) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, SQLException, NotFoundException {
@@ -28,7 +27,8 @@ public class LoginUseCase {
 		outputPort.successGetUserName(name);
 	}
 	
-	public void login(String id, String terminalNo) {
+	public void login(String id, String terminalNo) throws SQLException {
 		
+		connection.commit();
 	}
 }

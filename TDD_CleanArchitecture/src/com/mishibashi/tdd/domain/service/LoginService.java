@@ -3,7 +3,7 @@ package com.mishibashi.tdd.domain.service;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 
-import com.mishibashi.tdd.domain.model.UserAggregate;
+import com.mishibashi.tdd.domain.model.UserWrapperAggregate;
 import com.mishibashi.tdd.domain.repository.IUserRepository;
 import com.mishibashi.tdd.exception.NotFoundException;
 
@@ -15,21 +15,21 @@ public class LoginService {
 	}
 	
 	public boolean isExist(String id) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, SQLException {
-		UserAggregate users = _repository.findById(id);
+		UserWrapperAggregate users = _repository.findById(id);
 		return users.isExist();
 	}
 	
 	public String getName(String id) throws NotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, SQLException {
-		UserAggregate users = _repository.findById(id);
+		UserWrapperAggregate users = _repository.findById(id);
 		if(!users.isExist()) {
 			throw new NotFoundException();
 		}
 		
-		return users.getEntityList().get(0).getData().getName();
+		return users.getEntityWrapperList().get(0).getData().getName();
 	}
 	
 	public void login(String id, String terminalNo) throws NotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, SQLException {
-		UserAggregate users = _repository.findById(id);
+		UserWrapperAggregate users = _repository.findById(id);
 		if(!users.isExist()) {
 			throw new NotFoundException();
 		}

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mishibashi.tdd.domain.model.User;
-import com.mishibashi.tdd.domain.model.UserAggregate;
+import com.mishibashi.tdd.domain.model.UserWrapperAggregate;
 import com.mishibashi.tdd.domain.repository.IUserRepository;
 
 public class UserRepository implements IUserRepository {
@@ -20,7 +20,7 @@ public class UserRepository implements IUserRepository {
 	}
 
 	@Override
-	public UserAggregate findById(String id) throws SQLException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+	public UserWrapperAggregate findById(String id) throws SQLException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		String query = "SELECT * FROM user WHERE id='" + id + "';";
         Statement statement = _connection.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
@@ -28,7 +28,7 @@ public class UserRepository implements IUserRepository {
 		while(resultSet.next()) {
 			users.add(new User(resultSet.getString(1), resultSet.getString(2)));
 		}
-		return new UserAggregate((User[])users.toArray(new User[0]));
+		return new UserWrapperAggregate((User[])users.toArray(new User[0]));
 	}
 
 	@Override

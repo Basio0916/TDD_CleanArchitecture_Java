@@ -15,7 +15,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.mishibashi.tdd.domain.model.UserAggregate;
+import com.mishibashi.tdd.domain.model.UserWrapperAggregate;
 import com.mishibashi.tdd.domain.repository.IUserRepository;
 
 class UserRepositoryTest {
@@ -51,15 +51,15 @@ class UserRepositoryTest {
 	
 	@Test
 	void データがある場合のfindById() throws Exception {
-        UserAggregate userAggregate = repository.findById("0001");
+        UserWrapperAggregate userAggregate = repository.findById("0001");
 
-        assertEquals("0001", userAggregate.getFirstEntity().getData().getId());
-        assertEquals("Makoto Ishibashi", userAggregate.getFirstEntity().getData().getName());
+        assertEquals("0001", userAggregate.getFirstEntityWrapper().getData().getId());
+        assertEquals("Makoto Ishibashi", userAggregate.getFirstEntityWrapper().getData().getName());
 	}
 	
 	@Test
 	void データがない場合のfindById() throws Exception{
-        UserAggregate userAggregate = repository.findById("0003");
+        UserWrapperAggregate userAggregate = repository.findById("0003");
 		
         assertEquals(false, userAggregate.isExist());
 	}

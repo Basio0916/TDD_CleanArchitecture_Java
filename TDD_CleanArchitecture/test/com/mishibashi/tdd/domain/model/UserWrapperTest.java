@@ -4,14 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class UserEntityTest {
+class UserWrapperTest {
 
 	@Test
 	void 大文字に変換した名前を取得する() {
 		User user = new User("0001", "Makoto Ishibashi");
 		String expectedString = "MAKOTO ISHIBASHI";
 		
-		UserEntity userEntity = new UserEntity();
+		UserWrapper userEntity = new UserWrapper();
 		userEntity.setData(user);
 		
 		assertEquals(expectedString, userEntity.getUpperName());

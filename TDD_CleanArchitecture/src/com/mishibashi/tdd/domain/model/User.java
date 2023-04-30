@@ -1,6 +1,6 @@
 package com.mishibashi.tdd.domain.model;
 
-public class User implements Data{
+public class User implements Entity{
 	private final String _id;
 	
 	private final String _name;

@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import org.junit.jupiter.api.Test;
 
 import com.mishibashi.tdd.domain.model.User;
-import com.mishibashi.tdd.domain.model.UserAggregate;
+import com.mishibashi.tdd.domain.model.UserWrapperAggregate;
 import com.mishibashi.tdd.exception.NotFoundException;
 import com.mishibashi.tdd.infrastructure.UserRepository;
 
@@ -24,7 +24,7 @@ class LoginServiceTest {
 		
 		UserRepository mockRepository = mock(UserRepository.class);
 		
-		when(mockRepository.findById(id)).thenReturn(new UserAggregate(null));
+		when(mockRepository.findById(id)).thenReturn(new UserWrapperAggregate(null));
 		LoginService loginService = new LoginService(mockRepository);
 		
 		assertEquals(expected, loginService.isExist(id));
@@ -38,7 +38,7 @@ class LoginServiceTest {
 		UserRepository mockRepository = mock(UserRepository.class);
 		
 		User[] users = new User[] {new User("0001", "Makoto Ishibashi")};
-		when(mockRepository.findById(id)).thenReturn(new UserAggregate(users));
+		when(mockRepository.findById(id)).thenReturn(new UserWrapperAggregate(users));
 		LoginService loginService = new LoginService(mockRepository);
 		
 		assertEquals(expected, loginService.isExist(id));
@@ -50,7 +50,7 @@ class LoginServiceTest {
 		
 		UserRepository mockRepository = mock(UserRepository.class);
 		
-		when(mockRepository.findById(id)).thenReturn(new UserAggregate(null));
+		when(mockRepository.findById(id)).thenReturn(new UserWrapperAggregate(null));
 		LoginService loginService = new LoginService(mockRepository);
 		
 		assertThrows(NotFoundException.class, ()->{loginService.getName(id);});
@@ -64,7 +64,7 @@ class LoginServiceTest {
 		UserRepository mockRepository = mock(UserRepository.class);
 		
 		User[] users = new User[] {new User("0001", "Makoto Ishibashi")};
-		when(mockRepository.findById(id)).thenReturn(new UserAggregate(users));
+		when(mockRepository.findById(id)).thenReturn(new UserWrapperAggregate(users));
 		LoginService loginService = new LoginService(mockRepository);
 		
 		assertEquals(expected, loginService.getName(id));
@@ -77,7 +77,7 @@ class LoginServiceTest {
 		
 		UserRepository mockRepository = mock(UserRepository.class);
 		
-		when(mockRepository.findById(id)).thenReturn(new UserAggregate(null));
+		when(mockRepository.findById(id)).thenReturn(new UserWrapperAggregate(null));
 		LoginService loginService = new LoginService(mockRepository);
 		
 		assertThrows(NotFoundException.class, ()->{loginService.login(id, terminalNo);});
@@ -92,7 +92,7 @@ class LoginServiceTest {
 		UserRepository mockRepository = mock(UserRepository.class);
 
 		User[] users = new User[] {new User("0001", "Makoto Ishibashi")};
-		when(mockRepository.findById(id)).thenReturn(new UserAggregate(users));
+		when(mockRepository.findById(id)).thenReturn(new UserWrapperAggregate(users));
 		LoginService loginService = new LoginService(mockRepository);
 		
 		assertDoesNotThrow(()->{loginService.login(id, terminalNo);});

@@ -6,14 +6,14 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.junit.jupiter.api.Test;
 
-class UserAggregateTest {
+class UserWrapperAggregateTest {
 
 	@Test
 	void nullの場合のisExist() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		User[] user = null;
 		boolean expected = false;
 		
-		UserAggregate userAggregate = new UserAggregate(user);
+		UserWrapperAggregate userAggregate = new UserWrapperAggregate(user);
 		
 		assertEquals(expected, userAggregate.isExist());
 	}
@@ -23,7 +23,7 @@ class UserAggregateTest {
 		User[] user = new User[]{};
 		boolean expected = false;
 		
-		UserAggregate userAggregate = new UserAggregate(user);
+		UserWrapperAggregate userAggregate = new UserWrapperAggregate(user);
 		
 		assertEquals(expected, userAggregate.isExist());
 	}
@@ -33,7 +33,7 @@ class UserAggregateTest {
 		User[] user = new User[]{new User("0001", "Makoto Ishibashi")};
 		boolean expected = true;
 		
-		UserAggregate userAggregate = new UserAggregate(user);
+		UserWrapperAggregate userAggregate = new UserWrapperAggregate(user);
 		
 		assertEquals(expected, userAggregate.isExist());
 	}

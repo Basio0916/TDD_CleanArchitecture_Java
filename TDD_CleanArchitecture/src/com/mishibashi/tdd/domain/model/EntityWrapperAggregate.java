@@ -6,10 +6,10 @@ import java.util.List;
 
 import com.mishibashi.tdd.exception.NotFoundException;
 
-public abstract class Aggregate <T extends Entity<U>, U extends Data>{
+public abstract class EntityWrapperAggregate <T extends EntityWrapper<U>, U extends Entity>{
 	private final List<T> _entityList;
 	
-	public Aggregate(Class<T> type ,U data[]) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+	public EntityWrapperAggregate(Class<T> type ,U data[]) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		if(type == null) {
 			throw new NullPointerException();
 		}
@@ -26,18 +26,18 @@ public abstract class Aggregate <T extends Entity<U>, U extends Data>{
 		}
 	}
 	
-	public T getFirstEntity() throws NotFoundException {
+	public T getFirstEntityWrapper() throws NotFoundException {
 		if(!isExist()) {
 			throw new NotFoundException();
 		}
 		return _entityList.get(0);
 	}
 	
-	public List<T> getEntityList() {
+	public List<T> getEntityWrapperList() {
 		return _entityList;
 	}
 	
 	public boolean isExist() {
-		return getEntityList().size() != 0;
+		return getEntityWrapperList().size() != 0;
 	}
 }
