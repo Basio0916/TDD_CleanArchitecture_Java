@@ -24,13 +24,13 @@ class UserRepositoryTest {
 	private IUserRepository repository;
 	
 	private final String sqliteJdbc = "org.sqlite.JDBC";
-	private final String sqliteDBPath = "jdbc:sqlite:.\\database\\database.db";
+	private final String sqliteDBPath = "jdbc:sqlite:./database/database.db";
 	
 	@BeforeEach
 	public void setup() throws Exception{
 		databaseTester = new JdbcDatabaseTester(sqliteJdbc, sqliteDBPath);
 		
-		IDataSet userDataSet = new CsvDataSet(new File(".\\testdata"));
+		IDataSet userDataSet = new CsvDataSet(new File("./testdata"));
 		databaseTester.setDataSet(userDataSet);
 		
 		databaseTester.setSetUpOperation(DatabaseOperation.CLEAN_INSERT);

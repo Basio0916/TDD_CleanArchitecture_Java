@@ -17,7 +17,7 @@ import com.mishibashi.tdd.infrastructure.UserRepository;
 class LoginUseCaseTest {
 
 	private final String sqliteJdbc = "org.sqlite.JDBC";
-	private final String sqliteDBPath = "jdbc:sqlite:.\\database\\database.db";
+	private final String sqliteDBPath = "jdbc:sqlite:./database/database.db";
 
 	private Connection connection;
 	@Test
