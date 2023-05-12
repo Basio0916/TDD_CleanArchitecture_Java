@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="TDD_CleanArchitecture">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="11"/>
+    <property name="source" value="11"/>
+    <path id="JUnit 5.libraryclasspath">
+        <pathelement location="lib/junit/junit-jupiter-api_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-jupiter-engine_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-jupiter-migrationsupport_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-jupiter-params_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-commons_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-engine_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-launcher_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-runner_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-suite-api_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-suite-engine_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-suite-commons_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-vintage-engine_5.9.2.jar"/>
+        <pathelement location="lib/junit/org.opentest4j_1.2.0.jar"/>
+        <pathelement location="lib/junit/org.apiguardian.api_1.1.2.jar"/>
+        <pathelement location="lib/junit/org.junit_4.13.2.v20211018-1956.jar"/>
+        <pathelement location="lib/junit/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+    </path>
+    <path id="TDD_CleanArchitecture.classpath">
+        <pathelement location="bin"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <pathelement location="lib/byte-buddy-1.14.4.jar"/>
+        <pathelement location="lib/byte-buddy-agent-1.14.4.jar"/>
+        <pathelement location="lib/checker-qual-3.5.0.jar"/>
+        <pathelement location="lib/dbunit-2.7.3.jar"/>
+        <pathelement location="lib/mockito-core-5.3.1.jar"/>
+        <pathelement location="lib/mockito-subclass-5.3.1.jar"/>
+        <pathelement location="lib/objenesis-3.3.jar"/>
+        <pathelement location="lib/ojdbc8-19.3.0.0.jar"/>
+        <pathelement location="lib/ons-19.3.0.0.jar"/>
+        <pathelement location="lib/oraclepki-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_cert-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_core-19.3.0.0.jar"/>
+        <pathelement location="lib/postgresql-42.3.1.jar"/>
+        <pathelement location="lib/simplefan-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.25.jar"/>
+        <pathelement location="lib/sqlite-jdbc-3.41.2.1.jar"/>
+        <pathelement location="lib/ucp-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.25.jar"/>
+    </path>
+    <path id="run.LoginServiceTest.classpath">
+        <path refid="TDD_CleanArchitecture.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <pathelement location="lib/byte-buddy-1.14.4.jar"/>
+        <pathelement location="lib/byte-buddy-agent-1.14.4.jar"/>
+        <pathelement location="lib/checker-qual-3.5.0.jar"/>
+        <pathelement location="lib/dbunit-2.7.3.jar"/>
+        <pathelement location="lib/mockito-core-5.3.1.jar"/>
+        <pathelement location="lib/mockito-subclass-5.3.1.jar"/>
+        <pathelement location="lib/objenesis-3.3.jar"/>
+        <pathelement location="lib/ojdbc8-19.3.0.0.jar"/>
+        <pathelement location="lib/ons-19.3.0.0.jar"/>
+        <pathelement location="lib/oraclepki-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_cert-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_core-19.3.0.0.jar"/>
+        <pathelement location="lib/postgresql-42.3.1.jar"/>
+        <pathelement location="lib/simplefan-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.25.jar"/>
+        <pathelement location="lib/sqlite-jdbc-3.41.2.1.jar"/>
+        <pathelement location="lib/ucp-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.25.jar"/>
+    </path>
+    <path id="run.LoginUseCaseTest.classpath">
+        <path refid="TDD_CleanArchitecture.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <pathelement location="lib/byte-buddy-1.14.4.jar"/>
+        <pathelement location="lib/byte-buddy-agent-1.14.4.jar"/>
+        <pathelement location="lib/checker-qual-3.5.0.jar"/>
+        <pathelement location="lib/dbunit-2.7.3.jar"/>
+        <pathelement location="lib/mockito-core-5.3.1.jar"/>
+        <pathelement location="lib/mockito-subclass-5.3.1.jar"/>
+        <pathelement location="lib/objenesis-3.3.jar"/>
+        <pathelement location="lib/ojdbc8-19.3.0.0.jar"/>
+        <pathelement location="lib/ons-19.3.0.0.jar"/>
+        <pathelement location="lib/oraclepki-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_cert-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_core-19.3.0.0.jar"/>
+        <pathelement location="lib/postgresql-42.3.1.jar"/>
+        <pathelement location="lib/simplefan-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.25.jar"/>
+        <pathelement location="lib/sqlite-jdbc-3.41.2.1.jar"/>
+        <pathelement location="lib/ucp-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.25.jar"/>
+    </path>
+    <path id="run.TDD_CleanArchitecture.classpath">
+        <path refid="TDD_CleanArchitecture.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <pathelement location="lib/byte-buddy-1.14.4.jar"/>
+        <pathelement location="lib/byte-buddy-agent-1.14.4.jar"/>
+        <pathelement location="lib/checker-qual-3.5.0.jar"/>
+        <pathelement location="lib/dbunit-2.7.3.jar"/>
+        <pathelement location="lib/mockito-core-5.3.1.jar"/>
+        <pathelement location="lib/mockito-subclass-5.3.1.jar"/>
+        <pathelement location="lib/objenesis-3.3.jar"/>
+        <pathelement location="lib/ojdbc8-19.3.0.0.jar"/>
+        <pathelement location="lib/ons-19.3.0.0.jar"/>
+        <pathelement location="lib/oraclepki-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_cert-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_core-19.3.0.0.jar"/>
+        <pathelement location="lib/postgresql-42.3.1.jar"/>
+        <pathelement location="lib/simplefan-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.25.jar"/>
+        <pathelement location="lib/sqlite-jdbc-3.41.2.1.jar"/>
+        <pathelement location="lib/ucp-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.25.jar"/>
+    </path>
+    <path id="run.UserRepositoryTest.classpath">
+        <path refid="TDD_CleanArchitecture.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <pathelement location="lib/byte-buddy-1.14.4.jar"/>
+        <pathelement location="lib/byte-buddy-agent-1.14.4.jar"/>
+        <pathelement location="lib/checker-qual-3.5.0.jar"/>
+        <pathelement location="lib/dbunit-2.7.3.jar"/>
+        <pathelement location="lib/mockito-core-5.3.1.jar"/>
+        <pathelement location="lib/mockito-subclass-5.3.1.jar"/>
+        <pathelement location="lib/objenesis-3.3.jar"/>
+        <pathelement location="lib/ojdbc8-19.3.0.0.jar"/>
+        <pathelement location="lib/ons-19.3.0.0.jar"/>
+        <pathelement location="lib/oraclepki-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_cert-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_core-19.3.0.0.jar"/>
+        <pathelement location="lib/postgresql-42.3.1.jar"/>
+        <pathelement location="lib/simplefan-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.25.jar"/>
+        <pathelement location="lib/sqlite-jdbc-3.41.2.1.jar"/>
+        <pathelement location="lib/ucp-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.25.jar"/>
+    </path>
+    <path id="run.UserWrapperAggregateTest.classpath">
+        <path refid="TDD_CleanArchitecture.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <pathelement location="lib/byte-buddy-1.14.4.jar"/>
+        <pathelement location="lib/byte-buddy-agent-1.14.4.jar"/>
+        <pathelement location="lib/checker-qual-3.5.0.jar"/>
+        <pathelement location="lib/dbunit-2.7.3.jar"/>
+        <pathelement location="lib/mockito-core-5.3.1.jar"/>
+        <pathelement location="lib/mockito-subclass-5.3.1.jar"/>
+        <pathelement location="lib/objenesis-3.3.jar"/>
+        <pathelement location="lib/ojdbc8-19.3.0.0.jar"/>
+        <pathelement location="lib/ons-19.3.0.0.jar"/>
+        <pathelement location="lib/oraclepki-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_cert-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_core-19.3.0.0.jar"/>
+        <pathelement location="lib/postgresql-42.3.1.jar"/>
+        <pathelement location="lib/simplefan-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.25.jar"/>
+        <pathelement location="lib/sqlite-jdbc-3.41.2.1.jar"/>
+        <pathelement location="lib/ucp-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.25.jar"/>
+    </path>
+    <path id="run.UserWrapperTest.classpath">
+        <path refid="TDD_CleanArchitecture.classpath"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <pathelement location="lib/byte-buddy-1.14.4.jar"/>
+        <pathelement location="lib/byte-buddy-agent-1.14.4.jar"/>
+        <pathelement location="lib/checker-qual-3.5.0.jar"/>
+        <pathelement location="lib/dbunit-2.7.3.jar"/>
+        <pathelement location="lib/mockito-core-5.3.1.jar"/>
+        <pathelement location="lib/mockito-subclass-5.3.1.jar"/>
+        <pathelement location="lib/objenesis-3.3.jar"/>
+        <pathelement location="lib/ojdbc8-19.3.0.0.jar"/>
+        <pathelement location="lib/ons-19.3.0.0.jar"/>
+        <pathelement location="lib/oraclepki-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_cert-19.3.0.0.jar"/>
+        <pathelement location="lib/osdt_core-19.3.0.0.jar"/>
+        <pathelement location="lib/postgresql-42.3.1.jar"/>
+        <pathelement location="lib/simplefan-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.25.jar"/>
+        <pathelement location="lib/sqlite-jdbc-3.41.2.1.jar"/>
+        <pathelement location="lib/ucp-19.3.0.0.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.25.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="test">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <src path="test"/>
+            <classpath refid="TDD_CleanArchitecture.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="LoginServiceTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.mishibashi.tdd.domain.service.LoginServiceTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.LoginServiceTest.classpath"/>
+        </junit>
+    </target>
+    <target name="LoginUseCaseTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.mishibashi.tdd.application.usecase.login.LoginUseCaseTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.LoginUseCaseTest.classpath"/>
+        </junit>
+    </target>
+    <target name="TDD_CleanArchitecture">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.TDD_CleanArchitecture.classpath"/>
+        </junit>
+    </target>
+    <target name="UserRepositoryTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.mishibashi.tdd.infrastructure.UserRepositoryTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.UserRepositoryTest.classpath"/>
+        </junit>
+    </target>
+    <target name="UserWrapperAggregateTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.mishibashi.tdd.domain.model.UserWrapperAggregateTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.UserWrapperAggregateTest.classpath"/>
+        </junit>
+    </target>
+    <target name="UserWrapperTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.mishibashi.tdd.domain.model.UserWrapperTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.UserWrapperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
