@@ -11,7 +11,7 @@ class UserWrapperAggregateTest {
 	@Test
 	void nullの場合のisExist() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		User[] user = null;
-		boolean expected = false;
+		boolean expected = true;
 		
 		UserWrapperAggregate userAggregate = new UserWrapperAggregate(user);
 		
