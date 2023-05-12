@@ -10,22 +10,22 @@
     <property name="target" value="11"/>
     <property name="source" value="11"/>
     <path id="JUnit 5.libraryclasspath">
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-jupiter-api_5.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-jupiter-engine_5.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-jupiter-migrationsupport_5.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-jupiter-params_5.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-platform-commons_1.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-platform-engine_1.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-platform-launcher_1.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-platform-runner_1.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-platform-suite-api_1.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-platform-suite-engine_1.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-platform-suite-commons_1.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/junit-vintage-engine_5.9.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/org.opentest4j_1.2.0.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/org.apiguardian.api_1.1.2.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar"/>
-        <pathelement location="C:/Program Files/pleiades/2023-03/eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+        <pathelement location="lib/junit/junit-jupiter-api_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-jupiter-engine_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-jupiter-migrationsupport_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-jupiter-params_5.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-commons_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-engine_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-launcher_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-runner_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-suite-api_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-suite-engine_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-platform-suite-commons_1.9.2.jar"/>
+        <pathelement location="lib/junit/junit-vintage-engine_5.9.2.jar"/>
+        <pathelement location="lib/junit/org.opentest4j_1.2.0.jar"/>
+        <pathelement location="lib/junit/org.apiguardian.api_1.1.2.jar"/>
+        <pathelement location="lib/junit/org.junit_4.13.2.v20211018-1956.jar"/>
+        <pathelement location="lib/junit/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
     </path>
     <path id="TDD_CleanArchitecture.classpath">
         <pathelement location="bin"/>
